@@ -1,5 +1,5 @@
 import knex from 'knex';
-import config from '../knexfile';
+import config from './knexfile';
 
 const db = knex(config.development);
 
@@ -7,7 +7,8 @@ export default db;
 
 export interface User {
   id: string;
-  name: string;
+  email: string;
+  password_hash: string;
 }
 
 export interface Flashcard {
